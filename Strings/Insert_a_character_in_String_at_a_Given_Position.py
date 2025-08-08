@@ -19,3 +19,17 @@ print(s[:pos])
 print(s[pos:])
 new_string = s[:pos] + c + s[pos:]
 print(new_string)
+
+
+
+'''''''using for loop''''''
+New_s = ''
+
+for i in range(len(s) + 1):
+    if i == pos:
+        new_s += c 
+    if i < len(s):
+        new_s += s[i]
+
+print("Result:", new_s)
+
