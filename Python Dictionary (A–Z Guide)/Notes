@@ -12,4 +12,89 @@ student = {
 name, age, skills = keys
 Ajay, 25, ["Python", "Testing", "Debugging"] = values
 
+2. Creating Dictionaries
+d = {}                           #empty dictionary
+d = dict()                       #empty dict using contructor 
+d = {'a':1, 'b':2, 'c':2}        #with key values
+d = dict(x=1, y=2)               #with keyword args
+d5 = dict([("a", 1), ("b", 2)])   # from list of tuples
+
+3. Accessing Values
+d = {'a':1, 'b':2, 'c':2}
+
+print(d["a"])        # 1  (direct access, error if key not present)
+print(d.get("b"))    # 2  (safe access, returns None if missing)
+print(d.get("x", 0)) # 0  (default value if missing)
+
+4. Adding & Updating
+d = {"a": 1}
+
+d["b"] = 2            # add new key
+d["a"] = 10           # update existing key
+print(d)              # {'a': 10, 'b': 2}
+
+d.update({"c": 3})    # add/update multiple keys
+print(d)              # {'a': 10, 'b': 2, 'c': 3}
+
+5. Delecting
+d = {"a": 1, "b": 2, "c": 3}
+del d["a"]        # delete key
+print(d)          # {'b': 2, 'c': 3}
+
+d.pop("b")        # remove & return value
+print(d)          # {'c': 3}
+
+d.clear()         # remove all
+print(d)          # {}
+
+6. Dictionary Methods
+d = {"a": 1, "b": 2, "c": 3}
+
+print(d.keys())       # dict_keys(['a', 'b', 'c'])
+print(d.values())     # dict_values([1, 2, 3])
+print(d.items())      # dict_items([('a', 1), ('b', 2), ('c', 3)])
+
+print("a" in d)       # True  (check key existence)
+print(2 in d.values())# True  (check value existence)
+
+7. Looping Through Dict
+d = {"a": 1, "b": 2, "c": 3}
+
+for k in d:              # keys
+    print(k)
+
+for v in d.values():     # values
+    print(v)
+
+for k, v in d.items():   # both
+    print(k, v)
+
+8. Nested Dictionary
+students = {
+    "s1": {"name": "Ajay", "age": 25},
+    "s2": {"name": "Anu", "age": 23}
+}
+
+print(students["s1"]["name"])  # Ajay
+
+9. Dictionary Comprehension
+# square of numbers
+squares = {x: x*x for x in range(5)}
+print(squares)  # {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+
+# filtering
+even = {k: v for k, v in squares.items() if v % 2 == 0}
+print(even)  # {0: 0, 2: 4, 4: 16}
+
+
+
+
+
+
+
+
+
+
+
+
 
