@@ -1,0 +1,15 @@
+1. What is a Dictionary?
+  A dictionary is a collection of key-value pairs.
+  Keys are unique & immutable (string, int, tuple).
+  Values can be any type (string, list, dict, etc.).
+
+👉 Example:
+student = {
+    "name": "Ajay",
+    "age": 25,
+    "skills": ["Python", "Testing", "Debugging"]
+}
+name, age, skills = keys
+Ajay, 25, ["Python", "Testing", "Debugging"] = values
+
+
