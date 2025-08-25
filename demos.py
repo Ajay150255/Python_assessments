@@ -271,6 +271,116 @@ sub = [2, 3, 4]
 found = all(i in l1 for i in sub)
 print(found)
 
+# Reverse a string without using slicing.
+# Input: "hello" → Output: "olleh"
+s = "hello"
+s1 = ""
+for i in s:
+    s1 = i + s1
+print(s1)
+
+# Count vowels and consonants in a string.
+# Input: "Python" → Output: Vowels=1, Consonants=5
+s = "Python"
+vowels = "aeiouAEIOU"
+count_vo = 0
+count_con = 0
+for i in s:
+    if i in vowels:
+        count_vo += 1
+    if i not in vowels:
+        count_con += 1
+print(count_vo)
+print(count_con)
+
+# Check if a string is a palindrome.
+# Input: "madam" → Output: True
+s0 = "madam"
+rev = ""
+for i in s0:
+    rev = i + rev
+print(rev)
+is_plain = False
+if s0 == rev:
+    is_plain = True
+print(is_plain)
+
+s = "programming"
+
+# Step 1: Count frequencies manually
+freq = {}
+for ch in s:
+    if ch in freq:
+        freq[ch] = freq[ch] + 1
+    else:
+        freq[ch] = 1
+print(freq)
+
+# Step 2: Collect non-repeating chars
+non_repeats = []
+for ch in s:
+    if freq[ch] == 1:
+        non_repeats.append(ch)
+print(non_repeats)
+
+# Step 3: Print 1st, 2nd, 3rd non-repeating
+if len(non_repeats) >= 1:
+    print("non-repeating chars are:", non_repeats[0], non_repeats[1], non_repeats[2], non_repeats[3])
+    
+# Remove all duplicate characters from a string.
+# Input: "programming" → Output: "progamin"
+s= "programming"
+dup = ''
+dup1 = ''
+for i in s:
+    if i not in dup:
+        dup += i
+    else:
+        dup1 += i
+print(dup)
+print(dup1)
+
+# Find the second largest number in a list without using max() or sorted().
+# Input: [10, 20, 4, 45, 99] → Output: 45
+l = [-10, -20, -4, -45, 99]
+print(sorted(l)) ### assending order
+
+max = l[0]      # assume first element
+seco = float('-inf')  # very small
+
+for i in l:
+    if i > max:
+        seco = max
+        max = i
+    elif i > seco and i != max:
+        seco = i
+
+print("Largest:", max)
+print("Second Largest:", seco)
+
+# Remove duplicates from a list without using set().
+# Input: [1,2,2,3,4,4,5] → Output: [1,2,3,4,5]
+l = [1,2,2,3,4,4,5]
+l_dup = []
+for i in l:
+    if i not in l_dup:
+        # l_dup.append
+        l_dup += [i]
+print(l_dup)
+
+l = [1, 2, 3, 4, 5, 6]
+k = 2
+n = len(l)
+rotated = []  
+
+for i in range(n):
+    new_index = (i + k) % n   # shift each element k places
+    rotated.append(l[new_index])
+
+print(rotated)
+
+
+
 
 
 
